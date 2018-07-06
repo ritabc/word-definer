@@ -17,11 +17,15 @@ post('/') do
 end
 
 get('/word/:word') do
-  @word = Word.find(params.fetch(:word))
+  @current_word = Word.find(params.fetch(:word))
   erb(:word)
 end
 
 post('/word/:word') do
-  @word = Word.find(params.fetch(:word))
+  ## when we submit a definition, we want to stay on the page.
+  ### Do we need a @@current_word?
+  @current_word = Word.find(params.fetch("add_definition_btn"))
+  new_definition = params.fetch("add_definition")
+  @current_word.add_definition(new_definition)
   erb(:word)
 end
