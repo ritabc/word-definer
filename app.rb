@@ -27,3 +27,8 @@ post('/word/:word') do
   @current_word.add_definition(new_definition)
   erb(:word)
 end
+
+get('/back') do
+  @list = Word.get_word_list
+  erb(:input)
+end

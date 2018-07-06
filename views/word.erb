@@ -7,7 +7,11 @@
 </ol>
 <form action="/word/:word" method="post">
   <input type="text" name="add_definition">
-  <button type="submit" name="add_definition_btn" value="<%=@current_word.word%>"></button>
+  <button type="submit" name="add_definition_btn" value="<%=@current_word.word%>">Add Definition</button>
+</form>
+
+<form action="/back" method="get">
+  <button type="submit" name="button"></button>
 </form>
 <form action="/" method="post">
   <button type="button" name="return"></button>
