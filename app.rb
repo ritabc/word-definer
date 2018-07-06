@@ -17,5 +17,11 @@ post('/') do
 end
 
 get('/word/:word') do
-  @word = Item.find
+  @word = Word.find(params.fetch(:word))
+  erb(:word)
+end
+
+post('/word/:word') do
+  @word = Word.find(params.fetch(:word))
+  erb(:word)
 end
