@@ -14,5 +14,9 @@ describe("Word") do
       expect(new_word.definitions[0]).to(eq("terse in nature"))
     end
   end
-  # it("will update @@word_list when a word is added")
+  describe('@@word_list') do
+    it("will update @@word_list when a word is added") do
+      expect(Word.get_word_list).to(eq(['about', 'tertiary']))
+    end
+  end
 end
