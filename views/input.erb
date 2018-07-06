@@ -1,0 +1,10 @@
+<h3>Add a Word to be Defined</h3>
+<form action="/" method="post">
+  <input type="text" name="add_word">
+  <button type="submit" name="add_word_btn" class="btn btn-primary">Add Word</button>
+</form>
+
+<h3>Words to be Defined</h3>
+<%@list.each do |word_in_list| %>
+  <h5><a href="/word/<%=word_in_list.word%>"><%=word_in_list.word%></a></h5>
+<%end%>
