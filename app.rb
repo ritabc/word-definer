@@ -22,10 +22,13 @@ get('/word/:word') do
 end
 
 post('/word/:word') do
-  ## when we submit a definition, we want to stay on the page.
-  ### Do we need a @@current_word?
   @current_word = Word.find(params.fetch("add_definition_btn"))
   new_definition = params.fetch("add_definition")
   @current_word.add_definition(new_definition)
   erb(:word)
+end
+
+get('/back') do
+  @list = Word.get_word_list
+  erb(:input)
 end
