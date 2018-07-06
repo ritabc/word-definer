@@ -2,7 +2,7 @@
 
 #### Epicodus: Ruby Course: Tuesday, July 6th, 2018
 
-####Rita Bennett-Chew
+#### Rita Bennett-Chew
 
 ## Description
 
@@ -17,9 +17,9 @@ A word definer application for people to add words and their guesses at definiti
 
 ## Technologies Used
 
-** Ruby 2.4.1
-
-## Creation Notes
+* Ruby 2.4.1
+* Heroku:
+   [Link here](https://agile-citadel-30595.herokuapp.com/)
 
 ## License
 
